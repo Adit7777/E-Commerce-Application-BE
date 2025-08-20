@@ -28,6 +28,7 @@ public class ProductController {
 		product.setCreatedDate(LocalDateTime.now());
 		product.setStatus("Active");
 		Product result  = productService.save(product);
+		
 		return ResponseEntity.status(HttpStatus.CREATED).body(result);
 	}
 
